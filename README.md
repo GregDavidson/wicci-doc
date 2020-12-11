@@ -4,6 +4,4 @@ This directory is for documents related to the Wicci System.
 Currently there are only a few Diagrams as the other documents
 need to be moved into the Wicci System and updated.
 
-* [Wicci Diagrams at NGender](http://ngender.net/wicci/diagram)
-* [Wicci Diagram Sources](Diagrams/index2.html)
-
+* [Wicci Diagrams](index.html)
