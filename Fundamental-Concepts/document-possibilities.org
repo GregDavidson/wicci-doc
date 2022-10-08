@@ -5,6 +5,11 @@ you're reading right now! Although you already have experience with Digital
 Documents and may know a lot about such, you may gain some value by reading this
 short Document with Beginner's Mind, i.e. setting aside what you already know.
 
+Note: This document is a text file with [[https://orgmode.org/][OrgMode]] markup. GitHub and GitLab
+support OrgMode markup as a (more powerful) alternative to Markdown, although
+they don't support all OrgMode Features. OrgMode is one of the /killer features/
+of [[https://github.com/GregDavidson/computing-magic/blob/main/Software-Tools/Emacs/emacs-readme.org][Gnu Emacs]].
+
 ** Documents, Figures, Links
 
 *** What is a Document?
