@@ -1,5 +1,14 @@
 * The Wicci Documentation Update Project
 
+** [[http://gregdavidson.github.io/wicci-doc][Wicci Diagrams]]
+
+** Fundamental Concepts underlying the Wicci
+
+- [[file:Fundamental-Concepts/document-possibilities.org][Document Possibilities]]
+- [[file:Fundamental-Concepts/database-possibilities.org][Database Possibilities]]
+
+** What We're Trying To Do Here
+
 The Wicci has lots of documentation, scattered throughout the numerous folders
 of the project in a variety of formats, covering narrow topics without global
 coherence.
@@ -17,10 +26,3 @@ The Documentation Update Project has begun
 - improving documentation quality
 
 The Wicci documentation project has been waiting for your participation!
-
-** [[http://gregdavidson.github.io/wicci-doc][Wicci Diagrams]]
-
-** Fundamental Concepts underlying the Wicci
-
-- [[file:Fundamental-Concepts/document-possibilities.org][Document Possibilities]]
-- [[file:Fundamental-Concepts/database-possibilities.org][Database Possibilities]]
