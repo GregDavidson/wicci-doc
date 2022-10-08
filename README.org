@@ -12,7 +12,7 @@ the documentation doesn't need to wait for the Wicci to be stable!
 The Documentation Update Project has begun
 - gathering all Wicci documentation in one place - here
 - converting it all into a consistent format - OrgMode
-      - but hyperlinked to its 
+      - hyperlinked to the appropriate development folders
 - finding and filling gaps
 - improving documentation quality
 
