@@ -1,5 +1,10 @@
 * Digital Document Possibilities
 
+Almost everyone today interacts with Digital Documents - such as this Document
+you're reading right now! Although you already have experience with Digital
+Documents and may know a lot about such, you may gain some value by reading this
+short Document with Beginner's Mind, i.e. setting aside what you already know.
+
 ** Documents, Figures, Links
 
 *** What is a Document?
@@ -19,14 +24,15 @@ layout constraints.
 **** Examples of Composite and Specialized Figures
 
 - Composite Tables :: Consisting of a title, caption, column headers, row
-  headers and cells arranged in rows and columns. Some of the cells may
-  themselves be arbitrary composites.
+  headers and cells arranged in rows and columns. Cells may
+  contain figures, including composite figures!
 
-- Paragraphs Types :: Hierarchically arranged paragraphs, possibly numbered, bulleted and/or indented to show the hierarchical arrangement.
+- Paragraphs Types :: Hierarchically arranged paragraphs, possibly numbered,
+  bulleted and/or indented to show their organizational structure.
 
 - Composite Illustrations of Multiple Types :: Illustrations can be diagrams or
-  various kinds of images. They may consist of a hierarchical arrangement of
-  parts including text as well as diagram and image types.
+  diverse kinds of images. They may also consist of a hierarchical arrangement
+  of parts including text as well as diagram and image types.
 
 *** What's a Hypertext Document?
 
