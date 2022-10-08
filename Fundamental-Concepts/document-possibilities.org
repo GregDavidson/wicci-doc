@@ -64,7 +64,7 @@ programming code.
 ** What's a Collaborative Document?
 
 A /Collaborate Document/ is a document which lives on an Internet Server and can
-be visited simultaneously by multiple users.  If 
+be visited and worked on simultaneously by multiple users.
 
 *** Examples of Collaborative Documents
 
