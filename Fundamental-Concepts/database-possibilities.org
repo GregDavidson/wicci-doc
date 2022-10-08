@@ -1,0 +1,159 @@
+* Database Possibilities
+
+** Relational Tables and SQL
+
+Modern /Relational Databases/ are based on an elegant mathematical theory called
+/Relational Algebra/. /Database Users/ don't need to know much if anything about
+Relational Algebra as it's mostly hidden in the /SQL Language/, the
+international standard for working with Relational Databases.
+
+Most of the time we can simply think of data in a Relational Database as
+/Tables/ consisting of /Rows/ of /Fields/ which contain simple data:
+
+| id | name                  | citizenship |   birthday |
+|----+-----------------------+-------------+------------|
+|  1 | John Maynard Smith    | UK          | 1920-01-06 |
+|  2 | Jose Penso de la Vega | NL          | 1692-11-13 |
+|  3 | Mary Doe              | NULL        |       NULL |
+
+The most common types of data in fields are various kinds of /Numbers/, /Text/
+and /Dates/. Note that =NULL= is not a value, but rather indicates unknown or
+otherwise missing data. Superficially, Relational Tables look similar to tables
+in /Spreadsheets/ and other /Documents/ - indeed, using Relational Tables to
+store such has many advantages over the conventional method of using /XML
+Formats/ in /Text Files/.
+
+SQL allows us to access data
+#+begin_src sql
+  SELECT id, name FROM people WHERE citizenship = 'UK' AND birthday < '2000';
+#+end_src
+which appears as a new table
+| id | name                  |
+|----+-----------------------|
+|  1 | John Maynard Smith    |
+
+SQL also allows us to add new data
+#+begin_src sql
+  INSERT INTO people
+  VALUES (4, 'Jorge Francisco Isidoro Luis Borges Acevedo', 'AR', '1899-08-24');
+  UPDATE citizenship='US', birthday='1960-02-29') FROM people WHERE id = 3;
+#+end_src
+
+** Modifiability is CRUD!
+
+SQL deviates from the theory of Relational Algebra in several unfortunate ways.
+Perhaps the worst is that SQL allows us to arbitrarily modify data
+#+begin_src sql
+  UPDATE name='Louise Roberts', birthday='1960-02-29') FROM people WHERE id = 3;
+#+end_src
+
+SQL and nearly all modern Relational Database Systems are based on the /CRUD/
+model, which allows authorized users to *CREATE* new Tables and Rows, *READ*
+selected data, *UPDATE* any existing data and/or *DELETE* any Tables or Rows.
+
+The main reason why SQL supports unbounded modifiability is historical. When
+when SQL was invented, storage was very expensive. At the time of the
+development of Relational Databases, rotating magnetic disks were the primary
+persistent random access storage devices and none of them could hold even a
+Gigabyte of data!
+
+** The Monotonic Storage Model is almost always better!
+
+An alternative to /CRUD/ is the /Monotonic Storage Model/, which allows *CREATE*
+and *READ*, but only allows *UPDATE* to fill in missing data (i.e. where NULL
+indicates no value) and *DELETE* is not allowed at all. The /Monotonic/ model
+may seem too restrictive and potentially inefficient, but it has great
+advantages, especially in this era of cheap storage.
+
+The /Monotonic Storage Model/ is not new, it is the fundamental model for
+business accounting. Imagine that the owner of a shop in the 19th Century were
+to go in after hours and find one of the employees altering data in one of the
+/Ledger Books/! This was forbidden! If data needed to be changed, one didn't
+erase, overwrite, cross out data or tear out pages from the Ledger Books.
+Rather, one entered a correction with an explanation while preserving the
+original.
+
+Using the /Monotonic Storage Model/ with modern Relational Databases is pretty
+easy. A /Relational Schema/ identifies what data can be filled in later, and how
+newer data relates to older data.
+
+#+begin_src sql
+  CREATE TABLE person (
+    id UNIQUE NOT NULL,
+    birthday timestamp with time zone
+  );
+  CREATE TABLE persons_citizenships (
+    id NOT NULL REFERENCES person,
+    citizenship character(2) NOT NULL REFERENCES iso_country_codes,
+    starting timestamp NOT NULL,
+    ending timestamp
+  );
+  CREATE TABLE persons_names (
+    id NOT NULL REFERENCES person,
+    name text NOT NULL,
+    starting timestamp NOT NULL,
+    ending timestamp
+  );
+#+end_src
+
+Seems complicated, but it allows for people to have different names or
+citizenships over time or even at overlapping times. (And there are simple ways
+to limit such overlaps if desired.)
+
+We can also restore the simplicity of the original single table if we wish
+#+begin_src sql
+  CREATE VIEW people AS
+    SELECT p.id AS id, name, citizenship, birthday
+    FROM person p, persons_citizenships pc, persons_names pn
+    WHERE p.id = pc.id AND p.id = pn.id;
+#+end_src
+
+It is unfortunate that the SQL Standard allows all fields
+- to be /NULL/ unless we explicitly state /NOT NULL/ in the Schema
+- to be modifiable with *UPDATE*, even if they are /NOT NULL/
+
+Fortunately, modern SQL provides
+- /SQL Procedures/ which can
+      - abbreviate complex SQL and /PostgreSQL/
+      - thus providing for /SQL Metaprogramming/
+- /SQL Functions/ which make SQL /Turing Complete/
+
+And PostgreSQL has unusual super powers
+- triggers can prohibit undesirable operations
+      - e.g. enforcing monotonicity
+Types, Operators and Syntax are defined in PostgreSQL itself!
+- In Tables!
+- This is great for
+      - Extending the power of the Database
+      - Advanced /SQL Metaprogramming/
+
+** The Original Postgres Was Monotonic!
+
+PostgreSQL was developed from the earlier /Postgres/ research database system at
+UC Berkeley by the same group which co-invented Relational Database Systems in
+the 1970s. Postgres was Monotonic! Whenever a Table Row in Postgres was updated
+or deleted, the original row was saved and migrated to a /Tertiary Storage
+System/, an write-once Optical Jukebox with plenty of storage capacity (although
+slower to access). Any Postgres query could have a past time added, and Postgres
+would then output the result that would have been obtained if that query had
+been issued at that past time. This feature, called /Time Travel/, was removed
+when PostgreSQL was created, in order to conform to the SQL Standard (which
+didn't exist at the time Postgres was invented). This is a classic example of a
+/Regression/ caused by a Standard /Dumbing Down/ existing practice. Fortunately,
+a bit of /SQL Metaprogramming/ can reverse these and any other regressions in
+PostgreSQL!
+
+The original Postgres is not used anymore. The name Postgres nowadays is usually
+just a casual synonym for PostgreSQL.
+
+** Alternatives to SQL
+
+There are many alternatives to using SQL to access and update data in Relational
+Databases.
+
+A powerful and convenient method is to have Tables in a Relational Database
+appear as Spreadsheets or Tables in a Document and have Spreadsheet operations
+automagically translated into SQL. This method is available for several
+Relational Database Systems, including PostgreSQL. And with suitable PostgreSQL
+extensions loaded, any apparent non-monotonicity can be turned into
+non-destructive monotonic updates.

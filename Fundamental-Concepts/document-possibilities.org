@@ -1,0 +1,93 @@
+* Digital Document Possibilities
+
+** Documents, Figures, Links
+
+*** What is a Document?
+
+A traditional document is a set of /figures/ which are typeset and printed in a
+two-dimensional spatial layout, e.g. on bound paper pages.
+
+Examples of kinds of figures include /titles/, /paragraphs/, /tables/ (including
+/captions/), /illustrations/, /footnotes/, /citations/, etc. Typically most but
+not all figures consist of text. Paragraphs are special in that their content
+/flows/ across lines and possibly around other figures.
+
+There are generally several recognized types of each kind of figure and they may
+themselves be composites, i.e. a combination of component figures with internal
+layout constraints.
+
+**** Examples of Composite and Specialized Figures
+
+- Composite Tables :: Consisting of a title, caption, column headers, row
+  headers and cells arranged in rows and columns. Some of the cells may
+  themselves be arbitrary composites.
+
+- Paragraphs Types :: Hierarchically arranged paragraphs, possibly numbered, bulleted and/or indented to show the hierarchical arrangement.
+
+- Composite Illustrations of Multiple Types :: Illustrations can be diagrams or
+  various kinds of images. They may consist of a hierarchical arrangement of
+  parts including text as well as diagram and image types.
+
+*** What's a Hypertext Document?
+
+A hypertext document allows links to all or parts of other documents. The other
+documents might be /transcluded/, i.e. show as figures (or parts of figures) of
+the current document, or they may respond to a /gesture/, e.g. a pointer hover
+may bring up content in a pop-up window or a mouse button click may /navigate/
+to the linked content, etc.
+
+*** What's an Active Document?
+
+An active document interacts with the user via associated or embedded
+programming code.
+
+**** Examples of Active Documents
+
+- Interactive Maps :: allow the user to zoom and pan to explore territory,
+  apply different overlays and filters, plan routes, etc.
+
+- Notebooks :: allow users to explore variations of code and data with the
+  results shown conveniently alongside. Orgmode-Babel Notebooks, Jupyter
+  Notebooks, etc.
+
+** What's a Collaborative Document?
+
+A /Collaborate Document/ is a document which lives on an Internet Server and can
+be visited simultaneously by multiple users.  If 
+
+*** Examples of Collaborative Documents
+
+- Wiki and Wicci Documents :: allow users to update the content. Updates in
+  conventional /Wikis/ are destructive, but typically versioned and can be
+  rolled back if needed. Updates in /Wicci Documents/ are non-destructive,
+  creating new /Views/. Wicci Views are first class objects which can be
+  exchanged, merged and otherwise manipulated without any loss of data.
+
+- Collaborative Notebooks
+
+** Electronic Document Storage
+
+For some time Electronic Documents have primarily been stored as a sequence of
+bytes of characters, possibly with markup, in /Files/, i.e. sequences of bytes
+within /Filesystems/. In Filesystems there is no possibility of sharing content
+across documents and collaborative editing is difficult and dangerous - it can
+easily lead to file corruption and data loss.
+
+/Microsoft Office/, /Libre Office/ and many other document processing systems
+store documents using an XML text markup (Microsoft's complex document format
+also includes occasional sequences of non-text bytes). You don't notice that
+it's mostly text because they zip the text files into a compressed archive.
+Because of being compressed Documents can't be managed by source-control systems
+such as /Git/.
+
+An alternative is to store documents as atomic figures in an Object-Relational
+Database such as /PostreSQL/. This would allow structure sharing across
+documents and versions. Links would be unbreakable, even when Documents were
+refiled or renamed. Collaboration and Active Documents would be much easier given
+the standard multiple-version transaction support, etc.
+
+In retrospect it is obvious that it would be far better to store Documents (and
+nearly everything else) in Databases instead of in Files. But until recently
+storage was expensive and Database Systems were clumsy and inefficient. Changing
+established ways of doing things is difficult and sometimes the rewards can be
+well worth it.
