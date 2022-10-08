@@ -1,0 +1,26 @@
+* The Wicci Documentation Update Project
+
+The Wicci has lots of documentation, scattered throughout the numerous folders
+of the project in a variety of formats, covering narrow topics without global
+coherence.
+
+We initially assumed that all of that documentation would shortly be moved into
+the Wicci system itself where it would be easy to organize and improve it. This
+is still the plan and it now seems premature. In any case improving the state of
+the documentation doesn't need to wait for the Wicci to be stable!
+
+The Documentation Update Project has begun
+- gathering all Wicci documentation in one place - here
+- converting it all into a consistent format - OrgMode
+      - but hyperlinked to its 
+- finding and filling gaps
+- improving documentation quality
+
+The Wicci documentation project has been waiting for your participation!
+
+** [[http://gregdavidson.github.io/wicci-doc][Wicci Diagrams]]
+
+** Fundamental Concepts underlying the Wicci
+
+- [[file:Fundamental-Concepts/document-possibilities.org][Document Possibilities]]
+- [[file:Fundamental-Concepts/database-possibilities.org][Database Possibilities]]
