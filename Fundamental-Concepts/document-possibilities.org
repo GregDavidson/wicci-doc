@@ -79,10 +79,10 @@ be visited and worked on simultaneously by multiple users.
 ** Electronic Document Storage
 
 For some time Electronic Documents have primarily been stored as text, possibly
-with Markup, in /Files/, i.e. sequences of bytes within /Filesystems/. In
-Filesystems there is no possibility of sharing content across documents and
-collaborative editing is difficult and dangerous - it can easily lead to file
-corruption and data loss.
+with Markup, in /Files/, i.e. primitive /sequences of bytes/ within
+/Filesystems/. In Filesystems there is no possibility of sharing content across
+documents and collaborative editing is difficult and dangerous - it can easily
+lead to file corruption and data loss.
 
 /Microsoft Office/, /Libre Office/ and many other document processing systems
 store documents using an XML text markup (Microsoft's complex document format
@@ -92,7 +92,7 @@ Because of being compressed Documents can't be managed by source-control systems
 such as /Git/.
 
 An alternative is to store documents as atomic figures in an Object-Relational
-Database such as /PostreSQL/. This would allow structure sharing across
+Database such as /PostgreSQL/. This would allow structure sharing across
 documents and versions. Links would be unbreakable, even when Documents were
 refiled or renamed. Collaboration and Active Documents would be much easier given
 the standard multiple-version transaction support, etc.
@@ -100,5 +100,5 @@ the standard multiple-version transaction support, etc.
 In retrospect it is obvious that it would be far better to store Documents (and
 nearly everything else) in Databases instead of in Files. But until recently
 storage was expensive and Database Systems were clumsy and inefficient. Changing
-established ways of doing things is difficult and sometimes the rewards can be
-well worth it.
+established ways of doing things is difficult yet sometimes the rewards can be
+substantial!
