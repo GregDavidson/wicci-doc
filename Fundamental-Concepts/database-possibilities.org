@@ -82,9 +82,8 @@ The /Monotonic Storage Model/ is not new, it is the fundamental model for
 business accounting. Imagine that the owner of a shop in the 19th Century were
 to go in after hours and find one of the employees altering data in one of the
 /Ledger Books/! This was forbidden! If data needed to be changed, one didn't
-erase, overwrite, cross out data or tear out pages from the Ledger Books.
-Rather, one entered a correction with an explanation while preserving the
-original.
+erase or overwrite data or tear out pages from the Ledger Books. Rather, one
+added a correction with an explanation while preserving the original.
 
 Using the /Monotonic Storage Model/ with modern Relational Databases is pretty
 easy. A /Relational Schema/ identifies what data can be filled in later, and how
