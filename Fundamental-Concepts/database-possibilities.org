@@ -85,9 +85,9 @@ to go in after hours and find one of the employees altering data in one of the
 erase or overwrite data or tear out pages from the Ledger Books. Rather, one
 added a correction with an explanation while preserving the original.
 
-Using the /Monotonic Storage Model/ with modern Relational Databases is pretty
-easy. A /Relational Schema/ identifies what data can be filled in later, and how
-newer data relates to older data.
+Using the /Monotonic Storage Model/ with modern Relational Databases is
+straightforward. A /Relational Schema/ identifies what data can be filled in
+later, and how newer data relates to older data.
 
 #+begin_src sql
   CREATE TABLE person (
