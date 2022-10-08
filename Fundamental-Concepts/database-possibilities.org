@@ -57,7 +57,7 @@ SQL also allows us to add new data
 SQL deviates from the theory of Relational Algebra in several unfortunate ways.
 Perhaps the worst is that SQL allows us to arbitrarily modify data
 #+begin_src sql
-  UPDATE name='Louise Roberts', birthday='1960-02-29') FROM people WHERE id = 3;
+  UPDATE name='Louise Roberts', birthday='1929-08-09') FROM people WHERE id = 3;
 #+end_src
 
 SQL and nearly all modern Relational Database Systems are based on the /CRUD/
