@@ -8,6 +8,11 @@ i.e. setting aside what you already know. Modern Relational Databases are much
 more powerful than is widely recognized, and this is especially true of
 [[https://www.postgresql.org/][PostgreSQL]]!
 
+Note: This document is a text file with [[https://orgmode.org/][OrgMode]] markup. GitHub and GitLab
+support OrgMode markup as a (more powerful) alternative to Markdown, although
+they don't support all OrgMode Features. OrgMode is one of the /killer features/
+of [[https://github.com/GregDavidson/computing-magic/blob/main/Software-Tools/Emacs/emacs-readme.org][Gnu Emacs]].
+
 ** Relational Tables and SQL
 
 Modern /Relational Databases/ are based on an elegant mathematical theory called
