@@ -74,15 +74,15 @@ be visited and worked on simultaneously by multiple users.
   creating new /Views/. Wicci Views are first class objects which can be
   exchanged, merged and otherwise manipulated without any loss of data.
 
-- Collaborative Notebooks
+- Collaborative Notebooks :: See *Notebooks* above.
 
 ** Electronic Document Storage
 
-For some time Electronic Documents have primarily been stored as a sequence of
-bytes of characters, possibly with markup, in /Files/, i.e. sequences of bytes
-within /Filesystems/. In Filesystems there is no possibility of sharing content
-across documents and collaborative editing is difficult and dangerous - it can
-easily lead to file corruption and data loss.
+For some time Electronic Documents have primarily been stored as text, possibly
+with Markup, in /Files/, i.e. sequences of bytes within /Filesystems/. In
+Filesystems there is no possibility of sharing content across documents and
+collaborative editing is difficult and dangerous - it can easily lead to file
+corruption and data loss.
 
 /Microsoft Office/, /Libre Office/ and many other document processing systems
 store documents using an XML text markup (Microsoft's complex document format
