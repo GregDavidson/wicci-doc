@@ -18,7 +18,7 @@ of [[https://github.com/GregDavidson/computing-magic/blob/main/Software-Tools/Em
 Modern /Relational Databases/ are based on an elegant mathematical theory called
 /Relational Algebra/. /Database Users/ don't need to know much if anything about
 Relational Algebra as it's mostly hidden in the /SQL Language/, the
-international standard for working with Relational Databases.
+industry standard for working with Relational Databases.
 
 Most of the time we can simply think of data in a Relational Database as
 /Tables/ consisting of /Rows/ of /Fields/ which contain simple data:
