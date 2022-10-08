@@ -143,17 +143,17 @@ Types, Operators and Syntax are defined in PostgreSQL itself!
 
 PostgreSQL was developed from the earlier /Postgres/ research database system at
 UC Berkeley by the same group which co-invented Relational Database Systems in
-the 1970s. The original Postgres was Monotonic! Whenever a Table Row in Postgres was updated
-or deleted, the original row was saved and migrated to a /Tertiary Storage
-System/, a write-once Optical Jukebox with plenty of storage capacity (although
-slower to access). Any Postgres query could have a past time added, and Postgres
-would then output the result that would have been obtained if that query had
-been issued at that past time. This feature, called /Time Travel/, was removed
-when PostgreSQL was created, in order to conform to the SQL Standard (which
-didn't exist at the time Postgres was invented). This is a classic example of a
-/Regression/ caused by a Standard /Dumbing Down/ existing practice. Fortunately,
-a bit of /SQL Metaprogramming/ can reverse these and any other regressions in
-PostgreSQL!
+the 1970s. The original Postgres was Monotonic! Whenever a Table Row in Postgres
+was updated or deleted, the original row was saved and migrated to a /Tertiary
+Storage System/, a write-once Optical Jukebox with plenty of storage capacity
+(although slower to access). Any Postgres query could have a past time added,
+and Postgres would then output the result that would have been obtained if that
+query had been issued at that past time. This feature, called /Time Travel/, was
+removed when PostgreSQL was created, in order to conform to the SQL Standard
+(which didn't exist at the time Postgres was invented). This is a classic
+example of a /Regression/ caused by a Standard /Dumbing Down/ existing practice.
+Fortunately, a bit of /SQL Metaprogramming/ can reverse these and any other
+regressions in PostgreSQL!
 
 The original Postgres is not used anymore. The name Postgres nowadays is usually
 just a casual synonym for PostgreSQL.
