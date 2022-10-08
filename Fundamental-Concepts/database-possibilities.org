@@ -3,9 +3,9 @@
 For historical reasons, most computer systems and applications do not leverage
 advanced database systems very much if at all. This missing opportunity
 precludes many wonderful possibilities. If you already know something about
-database systems, I recommend you read this document with /Beginner's Mind/,
-i.e. setting aside what you already know. Modern Relational Databases are much
-more powerful than is widely recognized, and this is especially true of
+database systems, I recommend you read this short document with /Beginner's
+Mind/, i.e. setting aside what you already know. Modern Relational Databases are
+much more powerful than is widely recognized, and this is especially true of
 [[https://www.postgresql.org/][PostgreSQL]]!
 
 Note: This document is a text file with [[https://orgmode.org/][OrgMode]] markup. GitHub and GitLab
