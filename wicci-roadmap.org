@@ -1,0 +1,50 @@
+* New Wicci Roadmap
+
+** Big Steps
+
+Technical
+- Automate the required custom PostgreSQL build
+- Get the Wicci to build with the latest PostgreSQL
+      - With all tests passing
+- Make sure the Database can save the Wicci State
+- Create an impressive demo website
+- Restore the Wicci module system
+- Design and Automate Wicci System versioning
+- Expand the kinds of documents the Wicci can support
+      - Including working towards the Wicci containing itself
+- Create more impressive Wicci websites
+
+Non-Technical
+- Create a not-for-profit corporation to own the Wicci
+      - Possibly also owning LOEL
+- Get ambitious designers using the Wicci
+- Become financially sustainable
+- Create synergy with LOEL
+      - The Wicci is the LOEL infrastructure
+      - LOEL Learners improve the Wicci
+
+** Strategy
+
+Consider adopting a Tick-Tock development model, inspired by Intel.
+
+Tick steps are upgrades in the quality and power of the underlying system.
+Making the future better. Library improvements for the front end. Schema
+improvements for the back end.
+
+Tock steps are improvements in the user interface and convenience features. Web
+interfaces becoming nicer (with less effort because of preceding Ticks).
+
+** Smaller Steps
+
+More Technical
+- Improving code everywhere
+      - Cleaner, simpler, smaller, more maintainable
+      - Refactoring, eliminating cruft, modernizing
+- Better testing and automation
+- Improving documentation
+- Make the system need less documentation
+      - By making it more general and more consistent
+
+Less Technical
+- Create Presentations
+      - Demos, Videos

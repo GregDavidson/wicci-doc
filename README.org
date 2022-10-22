@@ -1,11 +1,14 @@
 * The Wicci Documentation Update Project
 
 ** [[http://gregdavidson.github.io/wicci-doc][Wicci Diagrams]]
+- Missing: Need explanations of key diagrams!
 
 ** Fundamental Concepts underlying the Wicci
 
 - [[file:Fundamental-Concepts/document-possibilities.org][Document Possibilities]]
 - [[file:Fundamental-Concepts/database-possibilities.org][Database Possibilities]]
+- Missing: Wicci Possibilities
+- [[file:wicci-roadmap.org][Wicci Roadmap]]
 
 ** What We're Trying To Do Here
 
