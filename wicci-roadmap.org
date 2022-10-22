@@ -8,8 +8,9 @@ Technical
       - With all tests passing
 - Make sure the Database can save the Wicci State
 - Create an impressive demo website
-- Restore the Wicci Module system
-      - It is currently dead code
+- Evaluate the Wicci Module system
+      - Is it obsolete given the PostgreSQL EXTENSION mechanism?
+      - If not, is it worth bringing back?
 - Design and Automate Wicci System versioning
 - Expand the kinds of documents the Wicci can support
       - Including working towards the Wicci containing itself
