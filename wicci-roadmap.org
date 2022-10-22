@@ -4,11 +4,12 @@
 
 Technical
 - Automate the required custom PostgreSQL build
-- Get the Wicci to build with the latest PostgreSQL
+- Get the Wicci Database to build with the latest PostgreSQL
       - With all tests passing
 - Make sure the Database can save the Wicci State
 - Create an impressive demo website
-- Restore the Wicci module system
+- Restore the Wicci Module system
+      - It is currently dead code
 - Design and Automate Wicci System versioning
 - Expand the kinds of documents the Wicci can support
       - Including working towards the Wicci containing itself
